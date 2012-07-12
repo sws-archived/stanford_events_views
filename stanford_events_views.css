@@ -1,0 +1,68 @@
+/*Pretty sidebar styles courtesy of Linnea Williams*/
+/*Month*/
+div#block-views-stanford-event-list-block div.view-id-stanford_event_list .views-field-field-stanford-event-datetime {
+color: #820000;
+    display: block;
+    font-family: "Georgia,Times New Roman,Times";
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*Day*/
+div#block-views-stanford-event-list-block div.view-id-stanford_event_list .views-field-field-stanford-event-datetime-1 {
+color: #565347;
+    display: block;
+    font-family: "Georgia,Times New Roman,Times";
+    font-size: 21px;
+    text-align: center;
+}
+
+/*Title and time of day*/
+div#block-views-stanford-event-list-block div.view-id-stanford_event_list .views-field-field-stanford-event-datetime-2 {
+border-left: 1px solid #EAE9E6;
+    display: block;
+    float: right;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 10px 5px;
+    width: 105px;
+}
+
+/*Month and Day positioning*/
+div#block-views-stanford-event-list-block .views-field-field-stanford-event-datetime {
+float: left;
+    width: 30px;
+}
+div#block-views-stanford-event-list-block .views-field-field-stanford-event-datetime-1{
+float: left;
+    width: 30px;
+}
+
+
+/*More Link*/
+div#block-views-stanford-event-list-block .more-link{
+border-bottom: 1px solid #EAE9E6;
+    border-top: 1px solid #EAE9E6;
+    color: #8A887D;
+    float: left;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin: 15px 0 25px;
+    padding: 2px 0;
+    text-align: right;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* Events Listing Page path=events */
+div.view-stanford-event-list .views-field-field-stanford-event-image img {
+float:left;
+margin-right:10px;
+}
+div.view-stanford-event-list .views-row {
+min-height:100px;
+}
+div.view-stanford-event-list .views-field-title {
+font-size:1.2em;
+}
