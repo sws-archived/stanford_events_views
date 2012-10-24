@@ -13,23 +13,23 @@ function stanford_events_views_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_day';
-  $strongarm->value = 'j';
-  $export['date_format_day'] = $strongarm;
+  $strongarm->name = 'date_format_stanford_day_number';
+  $strongarm->value = 'd';
+  $export['date_format_stanford_day_number'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_month';
+  $strongarm->name = 'date_format_stanford_month_short';
   $strongarm->value = 'M';
-  $export['date_format_month'] = $strongarm;
+  $export['date_format_stanford_month_short'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_time';
-  $strongarm->value = 'g:i';
-  $export['date_format_time'] = $strongarm;
+  $strongarm->name = 'date_format_stanford_time_12hour';
+  $strongarm->value = 'g:i a';
+  $export['date_format_stanford_time_12hour'] = $strongarm;
 
   return $export;
 }
