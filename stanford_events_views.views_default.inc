@@ -95,7 +95,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_stanford_event_datetime']['delta_reversed'] = 0;
   $handler->display->display_options['fields']['field_stanford_event_datetime']['field_api_classes'] = 0;
-  /* Sort criterion: Content: Date and Time (field_stanford_event_datetime) */
+  /* Sort criterion: Content: Date and Time -  start date (field_stanford_event_datetime) */
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['id'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['table'] = 'field_data_field_stanford_event_datetime';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['field'] = 'field_stanford_event_datetime_value';
@@ -394,17 +394,17 @@ function stanford_events_views_views_default_views() {
 
   $view = new view;
   $view->name = 'stanford_events_views';
-  $view->description = 'List-style page, and sidebar block, Calendar, etc.';
-  $view->tag = 'default';
+  $view->description = 'List-style page and sidebar block';
+  $view->tag = '';
   $view->base_table = 'node';
-  $view->human_name = 'Stanford Event Views';
+  $view->human_name = 'Stanford Events List';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'stanford_event_list';
+  $handler->display->display_options['title'] = 'Events';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -540,11 +540,10 @@ function stanford_events_views_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['field_api_classes'] = 0;
-  /* Sort criterion: Content: Date and Time (field_stanford_event_datetime) */
+  /* Sort criterion: Content: Date and Time -  start date (field_stanford_event_datetime) */
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['id'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['table'] = 'field_data_field_stanford_event_datetime';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['field'] = 'field_stanford_event_datetime_value';
-  $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -559,16 +558,17 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'stanford_event' => 'stanford_event',
   );
-  /* Filter criterion: Content: Date and Time (field_stanford_event_datetime) */
+  /* Filter criterion: Content: Date and Time -  start date (field_stanford_event_datetime) */
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['id'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['table'] = 'field_data_field_stanford_event_datetime';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['field'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_stanford_event_datetime_value']['default_date'] = 'now';
 
-  /* Display: Events List Page */
-  $handler = $view->new_display('page', 'Events List Page', 'page');
+  /* Display: Upcoming Events List Page */
+  $handler = $view->new_display('page', 'Upcoming Events List Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Events';
+  $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_stanford_event_image']['id'] = 'field_stanford_event_image';
@@ -723,8 +723,8 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   $handler->display->display_options['path'] = 'stanford-events';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Upcoming Block */
+  $handler = $view->new_display('block', 'Upcoming Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -931,11 +931,26 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['empty_zero'] = 0;
   $handler->display->display_options['fields']['nothing']['hide_alter_empty'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date and Time (field_stanford_event_datetime) */
+  /* Sort criterion: Content: Date and Time -  start date (field_stanford_event_datetime) */
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['id'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['table'] = 'field_data_field_stanford_event_datetime';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['field'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['block_description'] = 'Upcoming Events - Date Stacked';
+
+  /* Display: Upcoming Feed */
+  $handler = $view->new_display('feed', 'Upcoming Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['path'] = 'stanford-events/feed';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'block' => 'block',
+    'default' => 0,
+  );
+  $handler->display->display_options['sitename_title'] = 0;
   $export['stanford_events_views'] = $view;
 
   return $export;
