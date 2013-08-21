@@ -1,0 +1,6 @@
+Stanford Events Views x.x-x.x xxxx-xx-xx
+--------------------------------------
+
+Stanford Events Views 7.x-1.0-alpha9 2013-08-21
+-----------------------------------------------
+Initial tagged release.
