@@ -208,21 +208,21 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
 
-<div>
-<div class="event-image">[field_stanford_event_image]</div>
-</div>
+  <div>
+  <div class="event-image">[field_stanford_event_image]</div>
+  </div>
 
-<div>
-<div class="event-title"><h3>[title]</h3></div>
-<div class="descriptor">
-<div class="event-date-long">[field_stanford_event_datetime]</div>
-<div class="event-location">[field_stanford_event_location]</div>
-</div>
+  <div>
+  <div class="event-title"><h3>[title]</h3></div>
+  <div class="descriptor">
+  <div class="event-date-long">[field_stanford_event_datetime]</div>
+  <div class="event-location">[field_stanford_event_location]</div>
+  </div>
 
-<div class="edit-link">[edit_node]</div>
+  <div class="edit-link">[edit_node]</div>
 
-</div>
-</div>';
+  </div>
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -391,21 +391,21 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
 
-<div>
-<div class="event-image">[field_stanford_event_image]</div>
-</div>
+  <div>
+  <div class="event-image">[field_stanford_event_image]</div>
+  </div>
 
-<div>
-<div class="event-title"><h3>[title]</h3></div>
-<div class="descriptor">
-<div class="event-date-long">[field_stanford_event_datetime]</div>
-<div class="event-location">[field_stanford_event_location]</div>
+  <div>
+  <div class="event-title"><h3>[title]</h3></div>
+  <div class="descriptor">
+  <div class="event-date-long">[field_stanford_event_datetime]</div>
+  <div class="event-location">[field_stanford_event_location]</div>
 
-<div class="edit-link">[edit_node]</div>
+  <div class="edit-link">[edit_node]</div>
 
-</div>
-</div>
-</div>';
+  </div>
+  </div>
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -493,7 +493,7 @@ function stanford_events_views_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'well';
+  $handler->display->display_options['css_class'] = 'views-row-lines well';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
@@ -648,17 +648,17 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
-<div>
-<div class="event-image">[field_stanford_event_image]</div>
-</div>
-<div>
-<div class="event-title"><h3>[title]</h3></div>
-<div class="descriptor">
-<div class="event-date-long">[field_stanford_event_datetime]</div>
-<div class="event-location">[field_stanford_event_location]</div>
-</div>
-</div>
-</div>';
+  <div>
+  <div class="event-image">[field_stanford_event_image]</div>
+  </div>
+  <div>
+  <div class="event-title"><h3>[title]</h3></div>
+  <div class="descriptor">
+  <div class="event-date-long">[field_stanford_event_datetime]</div>
+  <div class="event-location">[field_stanford_event_location]</div>
+  </div>
+  </div>
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
@@ -1232,7 +1232,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<p>Currently, no future events are scheduled.</p>
-';
+  <p><a class="more-link" href="https://sites.stanford.edu/english/events/past-events">View Past Events</a></p>';
   $handler->display->display_options['empty']['area']['format'] = 'content_editor_text_format';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -1241,7 +1241,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2] ';
+  [field_stanford_event_datetime_2] ';
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1282,7 +1282,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['field'] = 'field_stanford_event_datetime';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['label'] = '';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['alter']['text'] = '[field_stanford_event_datetime]
-[field_stanford_event_datetime_1]';
+  [field_stanford_event_datetime_1]';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['settings'] = array(
@@ -1317,8 +1317,8 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['default_date'] = 'now';
 
-  /* Display: 10 Item Upcoming List Page with Pager */
-  $handler = $view->new_display('page', '10 Item Upcoming List Page with Pager', 'page_10_item_list_with_pager');
+  /* Display: Upcoming Events List Page */
+  $handler = $view->new_display('page', 'Upcoming Events List Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['enabled'] = FALSE;
@@ -1342,7 +1342,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2] ';
+  [field_stanford_event_datetime_2] ';
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1354,7 +1354,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['label'] = '';
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2]';
+  [field_stanford_event_datetime_2]';
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['settings'] = array(
@@ -1378,22 +1378,22 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
-<div>
-<div class="event-image">[field_stanford_event_image]</div>
-</div>
-<div>
-<div class="event-title"><h3>[title]</h3></div>
-<div class="descriptor">
-<div class="event-date-long">[field_stanford_event_datetime_2]</div>
-<div class="event-location">[field_stanford_event_location]</div>
-</div>
-</div>
-</div>';
+  <div>
+  <div class="event-image">[field_stanford_event_image]</div>
+  </div>
+  <div>
+  <div class="event-title"><h3>[title]</h3></div>
+  <div class="descriptor">
+  <div class="event-date-long">[field_stanford_event_datetime_2]</div>
+  <div class="event-location">[field_stanford_event_location]</div>
+  </div>
+  </div>
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'stanford-events';
 
-  /* Display: 2 Item Upcoming List Date Stacked */
-  $handler = $view->new_display('block', '2 Item Upcoming List Date Stacked', 'block_2_item_upcoming_list_date_stacked');
+  /* Display: Upcoming Block */
+  $handler = $view->new_display('block', 'Upcoming Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upcoming Events';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -1424,7 +1424,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2] ';
+  [field_stanford_event_datetime_2] ';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -1435,7 +1435,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['label'] = '';
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2]';
+  [field_stanford_event_datetime_2]';
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_2']['settings'] = array(
@@ -1468,7 +1468,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['label'] = '';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['alter']['text'] = '[field_stanford_event_datetime]
-[field_stanford_event_datetime_1]';
+  [field_stanford_event_datetime_1]';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['element_default_classes'] = FALSE;
@@ -1505,19 +1505,19 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
 
-<div class="date-stacked">
-<div class="date-month">[field_stanford_event_datetime]</div>
-<div class="date-day">[field_stanford_event_datetime_1]</div>
-</div>
+  <div class="date-stacked">
+  <div class="date-month">[field_stanford_event_datetime]</div>
+  <div class="date-day">[field_stanford_event_datetime_1]</div>
+  </div>
 
-<div>
-<div class="event-title normal-link"><h3>[title]</h3></div>
-<div class="event-location descriptor">[field_stanford_event_location]</div>
-<div class="event-date-long descriptor">[field_stanford_event_datetime_2]</div>
-<div class="edit-link">[edit_node]</div>
-</div>
+  <div>
+  <div class="event-title normal-link"><h3>[title]</h3></div>
+  <div class="event-location descriptor">[field_stanford_event_location]</div>
+  <div class="event-date-long descriptor">[field_stanford_event_datetime_2]</div>
+  <div class="edit-link">[edit_node]</div>
+  </div>
 
-</div>';
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -1525,6 +1525,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['id'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['table'] = 'field_data_field_stanford_event_datetime';
   $handler->display->display_options['sorts']['field_stanford_event_datetime_value']['field'] = 'field_stanford_event_datetime_value';
+  $handler->display->display_options['block_description'] = 'Events Upcoming - Date Stacked';
 
   /* Display: Upcoming Feed */
   $handler = $view->new_display('feed', 'Upcoming Feed', 'feed_1');
@@ -1542,8 +1543,8 @@ function stanford_events_views_views_default_views() {
   );
   $handler->display->display_options['sitename_title'] = 0;
 
-  /* Display: 5 Item Upcoming List Block */
-  $handler = $view->new_display('block', '5 Item Upcoming List Block', 'block_5_item_upcoming_list');
+  /* Display: Upcoming - List Block */
+  $handler = $view->new_display('block', 'Upcoming - List Block', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'views-row-lines';
@@ -1582,7 +1583,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2] ';
+  [field_stanford_event_datetime_2] ';
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1619,17 +1620,17 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
-<div>
-<div class="event-image">[field_stanford_event_image]</div>
-</div>
-<div>
-<div class="event-title"><h3>[title]</h3></div>
-<div class="descriptor">
-<div class="event-date-long">[field_stanford_event_datetime_2]</div>
-<div class="event-location">[field_stanford_event_location]</div>
-</div>
-</div>
-</div>';
+  <div>
+  <div class="event-image">[field_stanford_event_image]</div>
+  </div>
+  <div>
+  <div class="event-title"><h3>[title]</h3></div>
+  <div class="descriptor">
+  <div class="event-date-long">[field_stanford_event_datetime_2]</div>
+  <div class="event-location">[field_stanford_event_location]</div>
+  </div>
+  </div>
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
@@ -1641,9 +1642,10 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_wrapper_class'] = 'edit-link';
   $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  $handler->display->display_options['block_description'] = 'Events Upcoming - List Block';
 
-  /* Display: 5 Item Past Events List Block */
-  $handler = $view->new_display('block', '5 Item Past Events List Block', 'block_5_item_past_events_list');
+  /* Display: Past Events - List Block */
+  $handler = $view->new_display('block', 'Past Events - List Block', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'views-row-lines';
@@ -1686,7 +1688,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2] ';
+  [field_stanford_event_datetime_2] ';
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1723,17 +1725,17 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
-<div>
-<div class="event-image">[field_stanford_event_image]</div>
-</div>
-<div>
-<div class="event-title"><h3>[title]</h3></div>
-<div class="descriptor">
-<div class="event-date-long">[field_stanford_event_datetime_2]</div>
-<div class="event-location">[field_stanford_event_location]</div>
-</div>
-</div>
-</div>';
+  <div>
+  <div class="event-image">[field_stanford_event_image]</div>
+  </div>
+  <div>
+  <div class="event-title"><h3>[title]</h3></div>
+  <div class="descriptor">
+  <div class="event-date-long">[field_stanford_event_datetime_2]</div>
+  <div class="event-location">[field_stanford_event_location]</div>
+  </div>
+  </div>
+  </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
@@ -1773,6 +1775,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['field'] = 'field_stanford_event_datetime_value';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['operator'] = '<=';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['default_date'] = 'now';
+  $handler->display->display_options['block_description'] = 'Events Past - List Block';
 
   /* Display: Create New Event Link */
   $handler = $view->new_display('block', 'Create New Event Link', 'block_3');
@@ -1794,7 +1797,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[title]
-[field_stanford_event_datetime_2] ';
+  [field_stanford_event_datetime_2] ';
   $handler->display->display_options['fields']['title']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -1838,7 +1841,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['label'] = '';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['alter']['text'] = '[field_stanford_event_datetime]
-[field_stanford_event_datetime_1]';
+  [field_stanford_event_datetime_1]';
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['alter']['nl2br'] = TRUE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['settings'] = array(
