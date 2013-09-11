@@ -1472,7 +1472,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_stanford_event_datetime_1']['settings'] = array(
-    'format_type' => 'stanford_two_digit_date',
+    'format_type' => 'stanford_two_digit_day',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
