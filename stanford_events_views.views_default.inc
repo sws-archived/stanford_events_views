@@ -747,7 +747,6 @@ function stanford_events_views_views_default_views() {
     'timestamp' => 'title',
     'status' => 'status',
     'changed' => 'changed',
-    'field_s_slide_featured' => 'field_s_slide_featured',
     'field_stanford_event_datetime' => 'field_stanford_event_datetime',
     'field_stanford_event_location' => 'field_stanford_event_location',
     'field_stanford_event_sponsor' => 'field_stanford_event_sponsor',
@@ -795,13 +794,6 @@ function stanford_events_views_views_default_views() {
       'empty_column' => 0,
     ),
     'changed' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_s_slide_featured' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -921,9 +913,7 @@ function stanford_events_views_views_default_views() {
       'label' => 'Modify',
       'settings' => array(
         'show_all_tokens' => 0,
-        'display_values' => array(
-          'stanford_event::field_s_slide_featured' => 'stanford_event::field_s_slide_featured',
-        ),
+        'display_values' => array(),
       ),
     ),
     'action::views_bulk_operations_argument_selector_action' => array(
@@ -1035,10 +1025,6 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['date_format'] = 'short';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_s_slide_featured']['id'] = 'field_s_slide_featured';
-  $handler->display->display_options['fields']['field_s_slide_featured']['table'] = 'field_data_field_s_slide_featured';
-  $handler->display->display_options['fields']['field_s_slide_featured']['field'] = 'field_s_slide_featured';
   /* Field: Content: Date and Time */
   $handler->display->display_options['fields']['field_stanford_event_datetime']['id'] = 'field_stanford_event_datetime';
   $handler->display->display_options['fields']['field_stanford_event_datetime']['table'] = 'field_data_field_stanford_event_datetime';
@@ -1123,26 +1109,6 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
   $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    13 => 0,
-    11 => 0,
-    9 => 0,
-    7 => 0,
-    5 => 0,
-    15 => 0,
-    17 => 0,
-  );
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['id'] = 'field_s_slide_featured_value';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['table'] = 'field_data_field_s_slide_featured';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['field'] = 'field_s_slide_featured_value';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['expose']['operator_id'] = 'field_s_slide_featured_value_op';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['expose']['label'] = 'Featured';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['expose']['operator'] = 'field_s_slide_featured_value_op';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['expose']['identifier'] = 'field_s_slide_featured_value';
-  $handler->display->display_options['filters']['field_s_slide_featured_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     13 => 0,
