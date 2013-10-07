@@ -1159,6 +1159,11 @@ function stanford_events_views_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'admin/manage/events';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Manage Events';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'menu-manage-content-by-type';
+  $handler->display->display_options['menu']['context'] = 0;
 
   $export['stanford_events_manage'] = $view;
 
