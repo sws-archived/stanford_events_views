@@ -108,7 +108,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = '<p>No events currently scheduled.  See other <a href="https://sites.stanford.edu/english/events">upcoming events</a>.</p>';
+  $handler->display->display_options['empty']['area']['content'] = '<p>No events currently scheduled.  See other <a href="/events">upcoming events</a>.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'content_editor_text_format';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -304,7 +304,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = '<p>No events currently scheduled.  See other <a href="https://sites.stanford.edu/english/events">upcoming events</a>.</p>';
+  $handler->display->display_options['empty']['area']['content'] = '<p>No events currently scheduled.  See other <a href="/events">upcoming events</a>.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'content_editor_text_format';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -1198,7 +1198,7 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<p>Currently, no future events are scheduled.</p>
-  <p><a class="more-link" href="https://sites.stanford.edu/english/events/past-events">View Past Events</a></p>';
+  <p><a class="more-link" href="/events/past-events">View Past Events</a></p>';
   $handler->display->display_options['empty']['area']['format'] = 'content_editor_text_format';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
