@@ -1164,7 +1164,6 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'menu-manage-content-by-type';
   $handler->display->display_options['menu']['context'] = 0;
-
   $export['stanford_events_manage'] = $view;
 
   $view = new view();
@@ -1741,7 +1740,6 @@ function stanford_events_views_views_default_views() {
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['operator'] = '<=';
   $handler->display->display_options['filters']['field_stanford_event_datetime_value']['default_date'] = 'now';
   $handler->display->display_options['block_description'] = 'Events Past - List Block';
-
   $export['stanford_events_views'] = $view;
 
   return $export;
